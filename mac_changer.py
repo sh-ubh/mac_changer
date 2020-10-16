@@ -1,4 +1,6 @@
 #!/usr/bin/env python
+#optparse is more declarative type of command line
+#re is use to match the string of given regular expression
 import subprocess
 import optparse
 import re
@@ -29,7 +31,7 @@ def get_current_mac(interface):
 
 options = get_args()
 current_mac = get_current_mac(options.inter)
-print("Current MAC = " + str(current_mac))
+print("Current MAC =" + str(current_mac))
 
 change_mac(options.inter, options.new)
 current_mac = get_current_mac(options.inter)
